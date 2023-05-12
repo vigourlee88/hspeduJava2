@@ -6,6 +6,7 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+
 public class SocketTCP02Server {
 	public static void main(String[] args) throws IOException {
 		//思路
