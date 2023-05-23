@@ -25,4 +25,16 @@ SELECT COUNT(DISTINCT mgr)-- 去重DISTINCT
 SELECT MAX(sal)-MIN(sal)
       FROM emp;
       
-SELECT * FROM emp      
+SELECT * FROM emp    
+
+-- 多子句查询
+
+-- 统计各个部门group by 的平均工资avg(sal)，并且是 大于1000的having，
+-- 并且按照平均工资从高到低排序 order by
+-- 取出前两行数据 limit 0，2
+SELECT deptno,AVG(sal) AS avg_sal
+   FROM emp
+   GROUP BY deptno
+   HAVING avg_sal > 1000
+   ORDER BY avg_sal DESC -- 降序
+   LIMIT 0,2;
