@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+      <!-- 1.导入spring的坐标 spring-context,对应版本是5.2.10.RELEASE   -->
+      <!--  2.配置bean -->
+      <!-- bean标签标示配置bean,IoC文件交给bean,
+      id属性标示给bean起名字
+      class属性表示给bean定义类型，对应哪个要管理的对象
+      得是具体的实现类而不是接口，要靠这个造对象的
+      -->
+    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
+      
+    <!--name:为bean指定别名，别名可以有多个，使用逗号，分号，空格进行分隔--> 
+    <!-- 在Spring的配置文件中，修改<bean>的scope属性singleton：单例，prototype:非单例 -->
+    <bean id="bookService" name="service1 service2 service3" class="com.itheima.service.impl.BookServiceImpl" scope="prototype">
+    <!--7.配置service与dao的关系-->
+    <!--
+         property标签表示配置当前bean的属性
+         name属性表示配置哪一个具体的属性(这里是配置bookService的bookDao属性)
+         ref属性表示参照哪一个bean对象(参照当前配置文件中的bookDao)
+      -->
+        <property name="bookDao" ref="bookDao"></property>
+    </bean>
+    
+</beans>
