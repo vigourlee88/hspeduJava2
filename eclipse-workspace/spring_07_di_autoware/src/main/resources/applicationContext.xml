@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!-- <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>  --> 
+   <!--    既然是按类型注入了，那么id写不写都无所谓了-->
+   <bean class="com.itheima.dao.impl.BookDaoImpl"/>
+  
+  <!-- <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+       <property name="bookDao" ref="bookDao"/>  -->
+   <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" autowire="byType"/>
+   
+   <!--这里就有两个同一类型的bean，但是id不一样
+    <bean id="bookDao1" class="com.itheima.dao.impl.BookDaoImpl"/>
+    <bean id="bookDao2" class="com.itheima.dao.impl.BookDaoImpl"/>
+    <bean class="com.itheima.dao.impl.BookDaoImpl"/>
+    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" autowire="byName"/> -->
+ 
+
+</beans>

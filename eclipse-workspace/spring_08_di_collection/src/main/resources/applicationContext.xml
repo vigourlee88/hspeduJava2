@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+  <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+	    <!--数组注入-->
+		  <property name="array">
+		    <array>
+		      <value>100</value>
+		      <value>200</value>
+		      <value>300</value>
+		    </array>
+		  </property>
+		  <!--list集合注入-->
+		  <property name="list">
+		    <list>
+		      <value>张三</value>
+		      <value>ABC</value>
+		      <value>123</value>
+		    </list>
+		  </property>
+		  <!--set集合注入-->
+		  <property name="set">
+		    <set>
+		      <value>100</value>
+		      <value>200</value>
+		      <value>ABC</value>
+		      <value>ABC</value>
+		    </set>
+		  </property>
+		  <!--map集合注入-->
+		  <property name="map">
+		    <map>
+		      <entry key="探路者" value="马文"/>
+		      <entry key="次元游记兵" value="恶灵"/>
+		      <entry key="易位窃贼" value="罗芭"/>
+		    </map>
+		  </property>
+		  <!--Properties注入-->
+		  <property name="properties">
+		    <props>
+			  <prop key="暴雷">沃尔特·菲茨罗伊</prop>
+		      <prop key="寻血猎犬">布洛特·亨德尔</prop>
+		      <prop key="命脉">阿杰·切</prop>
+		    </props>
+		  </property>
+   </bean>
+   
+</beans>

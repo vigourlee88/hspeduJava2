@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=
+	"http://www.springframework.org/schema/beans 
+	 http://www.springframework.org/schema/beans/spring-beans.xsd
+	 http://www.springframework.org/schema/context 
+	 http://www.springframework.org/schema/context/spring-context.xsd
+	 ">
+  <!-- 让Spring框架能够扫描到写在类上的注解，需要在配置文件上进行包扫描 -->
+  <!-- base-package指定Spring框架扫描的包路径，它会扫描指定包及其子包中的所有类上的注解。com.itheima.dao.impl -->
+  <!-- 一般扫描到项目的组织名称即 Maven 的groupId下如:com.itheima即可。 -->
+  <context:component-scan base-package="com.itheima"/>
+  
+</beans>

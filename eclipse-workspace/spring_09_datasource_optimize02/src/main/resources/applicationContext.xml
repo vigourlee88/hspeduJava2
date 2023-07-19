@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+    xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+	    http://www.springframework.org/schema/context/spring-context.xsd "
+	xmlns:context="http://www.springframework.org/schema/context"
+	>
+	
+	<!-- 1.开启context命名空间 -->
+	<!-- xmlns:context="http://www.springframework.org/schema/context" -->   
+	
+	<!-- 2.使用context命名空间下的标签来加载properties配置文件 -->
+	<!-- 将system-properties-mode设置为NEVER，表示不加载系统环境变量，
+	当然还有一个解决方案就是避免使用username作为属性的key -->
+	
+	<context:property-placeholder  location="jdbc.properties"  system-properties-mode="NEVER"/>
+	<context:property-placeholder location="classpath*:*.properties" system-properties-mode="NEVER"/>
+	
+	<!-- 多个properties配置文件需要被加载 -->
+	<!--方式一 -->
+    <!-- <context:property-placeholder location="jdbc.properties,jdbc2.properties" system-properties-mode="NEVER"/> -->
+	<!-- 方式二 *.properties代表所有以properties结尾的文件都会被加载，可以解决方式一的问题，但是不标准 -->
+	<!-- <context:property-placeholder location="*.properties" system-properties-mode="NEVER"/> -->
+	
+	<!--方式三 (推荐)classpath:代表的是从根路径下开始查找，但是只能查询当前项目的根路径-->
+	<!-- <context:property-placeholder location="classpath:*.properties" system-properties-mode="NEVER"/>  -->
+	
+	<!--方式四 不仅可以加载当前项目还可以加载,当前项目所依赖的所有项目的根路径下的properties配置文件-->
+	<!-- <context:property-placeholder location="classpath*:*.properties" system-properties-mode="NEVER"/>  -->
+
+	<!-- 3.使用属性占位符 ${key}来读取properties配置文件中的属性 -->
+	
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driverClass}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean> 
+    
+    <!-- 添加bean的配置管理、读取外部properties、依赖注入: -->
+    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+       <property name="name" value="${jdbc.username}"></property>
+    </bean>
+
+</beans>
