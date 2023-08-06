@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.itheima</groupId>
-  <artifactId>springmvc_07_quickstart</artifactId>
+  <artifactId>springmvc_07_request_param</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>springmvc_07_quickstart Maven Webapp</name>
+  <name>springmvc_07_request_param Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 

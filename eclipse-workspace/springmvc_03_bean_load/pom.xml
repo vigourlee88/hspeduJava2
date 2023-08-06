@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.itheima</groupId>
-  <artifactId>springmvc_07_quickstart</artifactId>
+  <artifactId>springmvc_03_bean_load</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <parent>
