@@ -23,9 +23,9 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 	<!--这里使用MP提供的sqlSessionFactory，完成了Spring与MP的整合 -->
 	<bean id="sqlSessionFactory"
 		class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		
+		<property name="dataSource" ref="dataSource" />	
 		<property name="configLocation" value="classpath:mybatis-config.xml"/>
+        
         <property name="globalConfig">
             <bean class="com.baomidou.mybatisplus.core.config.GlobalConfig">
                 <property name="dbConfig">
