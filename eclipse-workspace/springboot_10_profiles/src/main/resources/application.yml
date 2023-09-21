@@ -1,0 +1,16 @@
+#单一文件的格式
+#spring:
+#  profiles:
+#    active: dev
+#    include: devDB,devMVC
+
+spring:
+  profiles:
+#    active: pro
+#   pom.xml中设置多环境配置
+    active: '@profile.active@'
+    group: 
+      "dev": devDB,devMVC  #后加载的覆盖前面的MVC生效
+      "pro": devDB,proMVC
+    
+    
