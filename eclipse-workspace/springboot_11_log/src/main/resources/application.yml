@@ -1,0 +1,15 @@
+#开启debug模式，输出调试信息，常用于检查系统运行状况
+#debug: true  不推荐使用
+
+#设置日志级别，root表示根节点，即整体应用日志级别
+logging:  
+  #设置分组
+  group:
+    ebank: com.itheima.controller,com.itheima.service
+    iservice: com.alibaba
+  level:
+    root: info
+     #设置某个包的日志级别
+#    com.itheima.controller: debug
+    #设置分组，对某个组设置日志级别
+    ebank: warn
