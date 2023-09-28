@@ -1,0 +1,29 @@
+test:
+  prop: testValue
+
+#模拟数据库 
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
+      username: root
+      password: abc123
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#设置随机值
+testcase:
+  book:
+    id: ${random.int}
+    id2: ${random.int(10)}   //做范围控制,10以内
+    type: ${random.int!5,10!} //指定范围,5到10
+    name: \u9ED1\u9A6C${random.value}
+    uuid: ${random.uuid}
+    publishTime: ${random.long}
