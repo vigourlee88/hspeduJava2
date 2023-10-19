@@ -1,0 +1,5 @@
+spring:
+ mail:
+   host: smtp.qq.com #邮件供应商，发邮件
+   username: test@qq.com
+   password: test
