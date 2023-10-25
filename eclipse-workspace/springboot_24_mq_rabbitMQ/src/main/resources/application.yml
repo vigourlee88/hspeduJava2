@@ -1,0 +1,15 @@
+server:
+ port: 80
+ 
+spring:
+ activemq:
+   broker-url: tcp://localhost:61616 
+ jms:
+   pub-sub-domain: true  #发布点对点模型
+   template:
+    default-destination: itheima
+ 
+ rabbitmq:
+   host: localhost
+   port: 5672  #对外服务端口
+
