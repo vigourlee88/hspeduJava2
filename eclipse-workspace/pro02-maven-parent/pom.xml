@@ -7,5 +7,16 @@
   <modules>
   	<module>pro03-module-java</module>
   	<module>pro04-module-web</module>
+  	<module>pro05-module-properties</module>
+  	<module>pro06-module-a</module>
+  	<module>pro07-module-b</module>
+  	<module>pro08-module-c</module>
+  	<module>pro09-module-d</module>
+  	<module>pro10-module-x</module>
+  	<module>pro11-module-y</module>
+  	<module>pro12-module-z</module>
+  	<module>pro13-module-use-my-plugin</module>
+  	<module>pro14-module-profile</module>
+  	<module>pro15-module-use-outer</module>
   </modules>
 </project>
