@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.atguigu.maven</groupId>
+    <artifactId>pro02-maven-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>pro06-module-a</artifactId>
+ <dependencies>
+        <dependency>
+            <groupId>com.atguigu.maven</groupId>
+            <artifactId>pro07-module-b</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.atguigu.maven</groupId>
+            <artifactId>pro09-module-d</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        
+    </dependencies>
+
+</project>
