@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.atguigu.maven</groupId>
+    <artifactId>pro07-demo-imperial-court-micro-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>demo08-base-api</artifactId>
+<dependencies>
+        <!-- OpenFeign 专用依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <!-- 提供 Emp 实体类使用 -->
+        <dependency>
+            <groupId>com.atguigu.maven</groupId>
+            <artifactId>demo09-base-entity</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- 提供 ResultEntity 工具类使用 -->
+        <dependency>
+            <groupId>com.atguigu.maven</groupId>
+            <artifactId>demo10-base-util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
